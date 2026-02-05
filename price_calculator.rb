@@ -33,7 +33,7 @@ item_counts.each do |item, quantity|
   if pricing[:sale_quantity]
     sale_sets = quantity / pricing[:sale_quantity]
     remaining = quantity % pricing[:sale_quantity]
-    item_total += sale_sets * pricing[:sale_quantity]
+    item_total += sale_sets * pricing[:sale_price]
     item_total += remaining * pricing[:unit_price]
   else
     item_total = quantity * pricing[:unit_price] 
